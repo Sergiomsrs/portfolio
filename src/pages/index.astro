@@ -25,37 +25,37 @@ const base = import.meta.env.BASE_URL;
   description="Porfolio de Sergio Mendez"
 >
   <main class="px-4">
-    
     <SectionContainer id="contacto" class="py-32 pb-16 scroll-mt-20">
-<h1
-  class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
->
-  ¡Hola! Soy Sergio
+      <h1
+        class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        ¡Hola! Soy Sergio
+      </h1>
 
-</h1>
-
-<h2
-  class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
->
-  <span>Actualmente me encuentro dando un giro profesional hacia el mundo del desarrollo de software,</span>
-  <span class="text-amber-700 dark:text-amber-300">
-    tras una etapa en la que adquirí experiencia liderando equipos, organizando tareas y gestionando campañas en entornos exigentes.
-  </span>
-  <span>Me he formado en Desarrollo de Aplicaciones Multiplataforma,</span>
-  <span class="text-sky-700 dark:text-sky-300">
-    desarrollado proyectos en frontend con React
-  </span>
-  <span class="text-indigo-700 dark:text-indigo-300">
-    y en backend con Java y Spring Boot.
-  </span>
-  <span class="text-emerald-700 dark:text-emerald-300">
-    Me considero una persona en constante aprendizaje, motivado por seguir creciendo como desarrollador.
-  </span>
-</h2>
-
-
-
-
+      <h2
+        class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
+      >
+        <span
+          >Actualmente me encuentro dando un giro profesional hacia el mundo del
+          desarrollo de software,</span
+        >
+        <span class="text-amber-700 dark:text-amber-300">
+          tras una etapa en la que adquirí experiencia liderando equipos,
+          organizando tareas y gestionando campañas en entornos exigentes.
+        </span>
+        <span>Me he formado en Desarrollo de Aplicaciones Multiplataforma,</span
+        >
+        <span class="text-sky-700 dark:text-sky-300">
+          desarrollado proyectos en frontend con React
+        </span>
+        <span class="text-indigo-700 dark:text-indigo-300">
+          y en backend con Java y Spring Boot.
+        </span>
+        <span class="text-emerald-700 dark:text-emerald-300">
+          Me considero una persona en constante aprendizaje, motivado por seguir
+          creciendo como desarrollador.
+        </span>
+      </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill
@@ -74,8 +74,6 @@ const base = import.meta.env.BASE_URL;
         </SocialPill>
       </nav>
     </SectionContainer>
-
-  
 
     <SectionContainer id="proyectos" class="scroll-mt-20">
       <h2
@@ -109,15 +107,29 @@ const base = import.meta.env.BASE_URL;
         </SocialPill>
       </div>
       <Projects
+        title="MyClass360 - App de gestión y recursos para profesores."
+        description="MyClass360 es un sistema integral diseñado para la gestión eficiente de alumnos, clases y tareas. Su objetivo objetivo es simplificar la organización educativa y potenciar la productividad de docentes e instituciones. Primer recurso disponible: Generador de Sopa de Letras: Crea sopas de letras personalizadas de forma instantánea, listas para imprimir o compartir con tus estudiantes. "
+        image=`${base}my-class-360-landing.webp`
+        imageAlt="Captura de pantalla del proyecto MyClass360"
+      />
+      <div class="flex gap-4 mt-8 mb-8 flex-wrap justify-center w-full">
+        <VerDemo href="https://sergiomsrs.github.io/MyClass360-AngularUI/">
+          <Demo class="size-4 md:size-6" />
+          Ir a la Demo
+        </VerDemo>
+        <SocialPill href="https://github.com/Sergiomsrs/MyClass360-AngularUI">
+          <GitHubIcon class="size-4 md:size-6" />
+          MyClass360
+        </SocialPill>
+      </div>
+      <Projects
         title="TimeTrack App - Sistema de Gestión de Control Horario para Empleados."
         description="Aplicación web destinada al control horario de los trabajadores. Esta herramienta permitirá a los empleados registrar sus fichajes de forma sencilla, y ofrecerá a los administradores de la empresa un conjunto de funcionalidades de gestión y supervisión."
         image="timeTrack.webp"
         imageAlt="Captura de pantalla del proyecto TimeTrack App"
       />
-       <div class="flex gap-4 mt-8 mb-8 flex-wrap justify-center w-full">
-        <SocialPill
-          href="https://github.com/Sergiomsrs/timetrack-ui"
-        >
+      <div class="flex gap-4 mt-8 mb-8 flex-wrap justify-center w-full">
+        <SocialPill href="https://github.com/Sergiomsrs/timetrack-ui">
           <GitHubIcon class="size-4 md:size-6" />
           TimeTrackApp-UI
         </SocialPill>
@@ -151,7 +163,7 @@ const base = import.meta.env.BASE_URL;
         </SocialPill>
       </div>
     </SectionContainer>
-    
+
     <SectionContainer id="trayectoria" class="scroll-mt-20">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
@@ -161,8 +173,8 @@ const base = import.meta.env.BASE_URL;
       </h2>
       <Experience />
     </SectionContainer>
-    
-    <SectionContainer  id="sobre-mi">
+
+    <SectionContainer id="sobre-mi">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
