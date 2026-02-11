@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="description" content="Porfolio de Sergio Mendez"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="favicon.svg"><meta name="generator" content="Astro v5.9.3"><title>Porfolio de Sergio Mendez</title><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/portfolio/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CtSceO8m.js"></script><link rel="stylesheet" href="/portfolio/_astro/index.AJpbcOnq.css"></head> <body class="relative text-black dark:text-white"> <div class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-100 dark:bg-neutral-950
+      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
+      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> <nav class="bg-slate-100 shadow-md  w-full xl:w-[1120px] fixed top-0 left-1/2 -translate-x-1/2 z-50 mb-10 rounded-lg"> <div class="max-w-7xl mx-auto px-4"> <div class="flex justify-between h-16 items-center"> <span class="flex flex-col gap-0.5 px-2 sm:px-0 my-2"> <span class="font-bold text-base sm:text-xl text-gray-800">Sergio Méndez</span> <span class="text-xs sm:text-base font-medium text-gray-600 tracking-wide">T.S Desarrollo de Aplicaciones Multiplataforma</span> </span> <!-- Menú para pantallas grandes --> <div class="hidden md:flex space-x-6"> <a href="#proyectos" class="text-gray-700 hover:text-blue-600">Proyectos</a> <a href="#trayectoria" class="text-gray-700 hover:text-blue-600">Trayectoria</a> <a href="#sobre-mi" class="text-gray-700 hover:text-blue-600">Sobre mí</a> <a href="#contacto" class="text-gray-700 hover:text-blue-600">Contacto</a> </div> <!-- Botón hamburguesa para móvil --> <button id="menu-btn" class="md:hidden flex items-center" aria-label="Abrir menú"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> <!-- Menú móvil (oculto por defecto, solo visible en móvil) --> <div id="mobile-menu" class="hidden flex-col space-y-2 pb-4 md:hidden"> <a href="#proyectos" class="block py-2 text-gray-700 hover:text-blue-600">Proyectos</a> <a href="#trayectoria" class="block py-2 text-gray-700 hover:text-blue-600">Trayectoria</a> <a href="#sobre-mi" class="block py-2 text-gray-700 hover:text-blue-600">Sobre mí</a> <a href="#contacto" class="block py-2 text-gray-700 hover:text-blue-600">Contacto</a> </div> </div> </nav> <!-- Script para mostrar/ocultar el menú móvil solo en pantallas pequeñas --> <script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    if (window.innerWidth < 768) {
+      menu.classList.toggle('hidden');
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      menu.classList.add('hidden');
+    }
+  });
+  // Cierra el menú móvil al hacer clic en cualquier enlace del menú móvil
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>  <main class="px-4"> <section id="contacto" data-section="contacto" class="section py-32 pb-16 scroll-mt-20 w-full mx-auto lg:w-[740px] pb-16">  <h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+¡Hola! Soy Sergio
+</h1> <h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"> <span>Actualmente me encuentro dando un giro profesional hacia el mundo del
+          desarrollo de software,</span> <span class="text-amber-700 dark:text-amber-300">
+tras una etapa en la que adquirí experiencia liderando equipos,
+          organizando tareas y gestionando campañas en entornos exigentes.
+</span> <span>Me he formado en Desarrollo de Aplicaciones Multiplataforma,</span> <span class="text-sky-700 dark:text-sky-300">
+desarrollado proyectos en frontend con React
+</span> <span class="text-indigo-700 dark:text-indigo-300">
+y en backend con Java y Spring Boot.
+</span> <span class="text-emerald-700 dark:text-emerald-300">
+Me considero una persona en constante aprendizaje, motivado por seguir
+          creciendo como desarrollador.
+</span> </h2> <nav class="flex gap-4 mt-8 flex-wrap"> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://www.linkedin.com/in/sergio-mendez-soler-03902aa5/" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256"><path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="currentColor"></path></svg>
+LinkedIn
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/sergiomsrs" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+GitHub
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="mailto:sergiomsrs@gmail.com" target="_blank" rel="noopener noreferrer">  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"></path><path d="M3 6l9 6l9 -6"></path><path d="M15 18h6"></path><path d="M18 15l3 3l-3 3"></path></svg>
+sergiomsrs@gmail.com
+ </a> </nav>  </section> <section id="proyectos" data-section="proyectos" class="section scroll-mt-20 w-full mx-auto lg:w-[740px] pb-16">  <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"> <svg class="size-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path></svg>
+Proyectos
+</h2> <section class="flex flex-col mb-8 gap-y-16"> <article> <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2"> WorkSchedFlow - App de Gestion de Turnos de Trabajo. </h3> <p class="text-lg mb-4 text-pretty">WorkSchedFlow es una prueba de concepto diseñada para facilitar la gestión de turnos de trabajo. Su objetivo principal es cubrir las necesidades de los gestores de equipos, brindando una herramienta que simplifica el diseño de horarios mientras se asegura de cumplir con las normativas laborales y las expectativas de los empleados. La aplicación ofrece una interfaz intuitiva para gestionar los turnos, permitiendo a los responsables asegurar el cumplimiento legislativo y la optimización de los recursos, garantizando al mismo tiempo un equilibrio entre las demandas de la empresa y los derechos de los trabajadores.</p> <ul class="flex gap-x-2 flex-row mb-2"></ul> <img loading="lazy" class="rounded shadow-2xl shadow-white/10 aspect-video" src="/portfolio/workschedflow.webp" alt="Captura de pantalla del proyecto /portfolio/workschedflow.webp"> </article> </section> <div class="flex gap-4 mt-8 mb-8 flex-wrap justify-center w-full"> <a class="
+    bg-gradient-to-r from-purple-600 to-pink-600
+    text-white font-semibold
+    rounded-full
+    flex justify-center items-center gap-x-2
+    py-2 px-5
+    text-sm md:text-lg
+    shadow-lg
+    transition-transform duration-300
+    hover:scale-110 hover:shadow-xl hover:brightness-110
+    active:scale-95
+  " href="https://sergiomsrs.github.io/prueba-concepto-gestorTurnos/" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-hand-move"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5"></path><path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5"></path><path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5"></path><path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47"></path><path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427"></path><path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612"></path></svg>
+Ir a la Demo
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/prueba-concepto-gestorTurnos" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+WorkSchedFlow-UI
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/jobhourapp-poc-api" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+WorkSchedFlow-API
+ </a> </div> <section class="flex flex-col mb-8 gap-y-16"> <article> <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2"> MyClass360 - App de gestión y recursos para profesores. </h3> <p class="text-lg mb-4 text-pretty">MyClass360 es un sistema integral diseñado para la gestión eficiente de alumnos, clases y tareas. Su objetivo objetivo es simplificar la organización educativa y facilitar recursos a los docentes. Primer recurso disponible: Generador de Sopa de Letras: Crea sopas de letras personalizadas de forma instantánea, listas para imprimir o compartir con tus estudiantes. </p> <ul class="flex gap-x-2 flex-row mb-2"></ul> <img loading="lazy" class="rounded shadow-2xl shadow-white/10 aspect-video" src="/portfolio/my-class-360-landing.webp" alt="Captura de pantalla del proyecto /portfolio/my-class-360-landing.webp"> </article> </section> <div class="flex gap-4 mt-8 mb-8 flex-wrap justify-center w-full"> <a class="
+    bg-gradient-to-r from-purple-600 to-pink-600
+    text-white font-semibold
+    rounded-full
+    flex justify-center items-center gap-x-2
+    py-2 px-5
+    text-sm md:text-lg
+    shadow-lg
+    transition-transform duration-300
+    hover:scale-110 hover:shadow-xl hover:brightness-110
+    active:scale-95
+  " href="https://sergiomsrs.github.io/MyClass360-AngularUI/" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-hand-move"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5"></path><path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5"></path><path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5"></path><path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47"></path><path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427"></path><path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612"></path></svg>
+Ir a la Demo
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/MyClass360-AngularUI" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+MyClass360
+ </a> </div> <section class="flex flex-col mb-8 gap-y-16"> <article> <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2"> Name-Game - App de seleccion de nombres. </h3> <p class="text-lg mb-4 text-pretty">Name Game es una aplicación web ligera para explorar y descubrir nombres de forma aleatoria. Es un proyecto personal creado como ejercicio rápido para practicar frontend con JavaScript y trabajar con herramientas de IA en la depuración, clasificación y mejora de datasets (listas de nombres), además de iterar la experiencia de usuario. El objetivo fue construir algo funcional en poco tiempo y probar un flujo de trabajo apoyado por IA, desde la idea hasta el despliegue en GitHub Pages.</p> <ul class="flex gap-x-2 flex-row mb-2"></ul> <img loading="lazy" class="rounded shadow-2xl shadow-white/10 aspect-video" src="/portfolio/name-game.webp" alt="Captura de pantalla del proyecto /portfolio/name-game.webp"> </article> </section> <div class="flex gap-4 mt-8 mb-8 flex-wrap justify-center w-full"> <a class="
+    bg-gradient-to-r from-purple-600 to-pink-600
+    text-white font-semibold
+    rounded-full
+    flex justify-center items-center gap-x-2
+    py-2 px-5
+    text-sm md:text-lg
+    shadow-lg
+    transition-transform duration-300
+    hover:scale-110 hover:shadow-xl hover:brightness-110
+    active:scale-95
+  " href="https://sergiomsrs.github.io/name-game/" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-hand-move"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5"></path><path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5"></path><path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5"></path><path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47"></path><path d="M2.541 5.594a13.487 13.487 0 0 1 2.46 -1.427"></path><path d="M14 3.458c1.32 .354 2.558 .902 3.685 1.612"></path></svg>
+Ir a la Demo
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/name-game" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+Name-Game
+ </a> </div> <section class="flex flex-col mb-8 gap-y-16"> <article> <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2"> TimeTrack App - Sistema de Gestión de Control Horario para Empleados. </h3> <p class="text-lg mb-4 text-pretty">Aplicación web destinada al control horario de los trabajadores. Esta herramienta permitirá a los empleados registrar sus fichajes de forma sencilla, y ofrecerá a los administradores de la empresa un conjunto de funcionalidades de gestión y supervisión.</p> <ul class="flex gap-x-2 flex-row mb-2"></ul> <img loading="lazy" class="rounded shadow-2xl shadow-white/10 aspect-video" src="timeTrack.webp" alt="Captura de pantalla del proyecto timeTrack.webp"> </article> </section> <div class="flex gap-4 mt-8 mb-8 flex-wrap justify-center w-full"> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/timetrack-ui" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+TimeTrackApp-UI
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/timetrack-api" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+TimeTrackApp-API
+ </a> </div> <section class="flex flex-col mb-8 gap-y-16"> <article> <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2"> React Component - Formulario dinámico de extensión variable. </h3> <p class="text-lg mb-4 text-pretty">Formulario diseñado desde cero con React para la elaboración de planes nutricionales y de entrenamiento. Sigue una estructura de bloques e ítems que se pueden añadir o eliminar a gusto del usuario. Especialmente diseñado para poder implementar el análisis estadístico de los planes elaborados.</p> <ul class="flex gap-x-2 flex-row mb-2"></ul>  </article> </section> <section class="
+    w-full max-w-[1400px]
+    grid lg:grid-cols-10 auto-rows-[25rem] gap-4
+    mx-auto 
+    mb-10
+  "> <article class="
+    col-span-10 lg:col-span-4
+    col-span-5
+    relative rounded-xl
+    backdrop-blur-md
+    border border-black/10
+    shadow-inner shadow-white/10
+    overflow-hidden
+    group
+  "> <div class="absolute bottom-0 top-0 z-10 h-full w-full
+bg-gradient-to-b from-transparent from-40% via-[#151836]/50 to-[#151836]/80"></div> <div class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full bg-purple-950 bg-opacity-90
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"></div> <div class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-4 text-lg md:p-6"> <h2 class="mb-4 text-balance text-3xl font-semibold uppercase text-white"> Dinamic React Form </h2>  <h6 class="-mt-4 mb-4 text-xl font-semibold text-sky-200/80"> Diseñado para elaborar planes de entrenamiento y nutrición estructurados en bloques. </h6>   </div> </article> <article class="
+    col-span-10 lg:col-span-6
+    col-span-5
+    relative rounded-xl
+    backdrop-blur-md
+    border border-black/10
+    shadow-inner shadow-white/10
+    overflow-hidden
+    group
+  "> <div class="absolute bottom-0 top-0 z-10 h-full w-full
+bg-gradient-to-b from-transparent from-40% via-[#151836]/50 to-[#151836]/80"></div> <div class="background transition-scale absolute bottom-0 left-0 top-0
+    -z-10 h-full w-full
+    bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110" style="background-image: url('principal.webp')"></div> <div class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-4 text-lg md:p-6"> <h2 class="mb-4 text-balance text-3xl font-semibold uppercase text-white"> Elabora tus sesiones </h2> <h3 class="-mt-4 mb-4 text-3xl font-semibold text-sky-200/80"> Añade tantos bloques e ítems como quieras. </h3>    </div> </article> <article class="
+    col-span-10 lg:col-span-6
+    col-span-5
+    relative rounded-xl
+    backdrop-blur-md
+    border border-black/10
+    shadow-inner shadow-white/10
+    overflow-hidden
+    group
+  "> <div class="absolute bottom-0 top-0 z-10 h-full w-full
+bg-gradient-to-b from-transparent from-40% via-[#151836]/50 to-[#151836]/80"></div> <div class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110" style="background-image: url('primaria.webp')"></div> <div class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-4 text-lg md:p-6"> <h2 class="mb-4 text-balance text-3xl font-semibold uppercase text-white"> Creado Desde Cero </h2> <h3 class="-mt-4 mb-4 text-3xl font-semibold text-sky-200/80"> Con React y Javascript </h3>    </div> </article> <article class="
+    col-span-10 lg:col-span-4
+    col-span-5
+    relative rounded-xl
+    backdrop-blur-md
+    border border-black/10
+    shadow-inner shadow-white/10
+    overflow-hidden
+    group
+  "> <div class="absolute bottom-0 top-0 z-10 h-full w-full
+bg-gradient-to-b from-transparent from-40% via-[#151836]/50 to-[#151836]/80"></div> <div class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110" style="background-image: url('secundaria.webp')"></div> <div class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-4 text-lg md:p-6"> <h2 class="mb-4 text-balance text-3xl font-semibold uppercase text-white"> Estructura JSON </h2> <h3 class="-mt-4 mb-4 text-3xl font-semibold text-sky-200/80"> Data Analytics </h3>    </div> </article> </section> <section class="flex flex-col mb-8 gap-y-16"> <article> <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2"> Training App - Diseño de planes de entrenamiento </h3> <p class="text-lg mb-4 text-pretty">Desarrollo en proceso de una página web en la que aplico los conocimientos adquiridos en los últimos años. Se trata de una aplicación para la creación y gestión de entrenamientos. La web está construida con React e integra una API REST desarrollada con Java, Spring Boot y MySQL para la gestión de usuarios. También incluye otra API REST que utiliza MongoDB para la gestión de entrenamientos y el análisis de datos.</p> <ul class="flex gap-x-2 flex-row mb-2"></ul>  </article> </section> <div class=" grid grid-cols-8  gap-4 mb-8 "> <!-- Imagen en la esquina superior derecha --> <div class="relative col-span-8 rounded-xl overflow-hidden transform transition-all" style="background-image: url('fondo.webp');"> <div class="flex flex-col justify-center p-6 gap-2"> <h3 class="md:text-base lg:text-lg font-semibold text-white">
+Aplicación Completa de Gestión de Entrenamientos
+</h3> <h3 class="md:text-base lg:text-lg font-semibold text-white">
+Login y Registro de Usuarios con Springboot y JWT
+</h3> <h3 class="md:text-base lg:text-lg font-semibold text-white">
+Gestión de Entrenamientos mediante Api Rest Con Springboot y
+                MongoDB
+</h3> </div> </div> <div class="relative col-span-4 rounded-xl overflow-hidden transform transition-all"> <img src="useresylogin.webp" alt="Imagen 2" class="w-full h-full object-cover"> </div> <div class="relative col-span-4 rounded-xl overflow-hidden transform transition-all"> <img src="crear proceso fondo oscuro.webp" alt="Imagen 3" class="w-full h-full object-cover"> </div> <div class="relative col-span-8 rounded-xl overflow-hidden transform transition-all " style="background-image: url(fondo.webp);"> <div class="flex flex-col justify-center p-6 gap-2"> <h3 class="md:text-base lg:text-lg  font-semibold text-white">
+Modo Revisión y Edición de Entrenamientos
+</h3> <h3 class="md:text-base lg:text-lg  font-semibold text-white">
+Sección de Estadísticas sobre los Entrenamientos Registrados
+</h3> <h3 class="md:text-base lg:text-lg font-semibold text-white">
+Búsqueda de Entrenamientos en la Base de Datos por Palabras
+                Clave
+</h3> </div> </div> <div class="relative col-span-4 rounded-xl overflow-hidden transform transition-all"> <img src="estadisticas.webp" alt="Imagen 5" class="w-full h-full object-cover"> </div> <div class="relative col-span-4 rounded-xl overflow-hidden transform transition-all "> <img src="/portfolio/buscador.webp" alt="Imagen 7" class="w-full h-full object-cover"> </div> </div> <div class="flex gap-4 mt-8 mb-8 flex-wrap justify-center w-full"> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/app-training-v.0" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+App-Training
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/Wod-Api--Shared" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+Workout-Api
+ </a> <a class="
+  bg-white/5 
+    border dark:border-white/10 border-gray-300 rounded-full
+    flex justify-center items-center gap-x-2
+    py-1 px-2 md:py-2 md:px-4
+    text-xs md:text-base
+    text-black/70 dark:text-white
+    transition
+    hover:scale-110 hover:bg-white/10
+  " href="https://github.com/Sergiomsrs/Usersapp-Api--Shared" target="_blank" rel="noopener noreferrer">  <svg class="size-4 md:size-6" width="256" height="250" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 250"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg>
+User-Api
+ </a> </div>  </section> <section id="trayectoria" data-section="trayectoria" class="section scroll-mt-20 w-full mx-auto lg:w-[740px] pb-16">  <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-directions" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 21v-4"></path><path d="M12 13v-4"></path><path d="M12 5v-2"></path><path d="M10 21h4"></path><path d="M8 5v4h11l2 -2l-2 -2z"></path><path d="M14 13v4h-8l-2 -2l2 -2z"></path></svg>
+Mi Trayectoria
+</h2> <ol class="relative border-s border-gray-200 ml-3"> <li class="mb-10 ms-4"> <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div> <time class="mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80">2025</time> <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2"> Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma </h3> <p class="mb-4 text-base font-normal dark:text-gray-200 text-pretty"> Acabo de finalizar el ciclo formativo de Desarrollo de Aplicaciones Multiplataforma, donde he adquirido experiencia práctica en el desarrollo de aplicaciones web, móviles y de escritorio utilizando tecnologías como Java, Spring Boot, React, MySQL y Docker. </p>  </li><li class="mb-10 ms-4"> <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div> <time class="mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80">2021</time> <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2"> Cursos formativos en programación </h3> <p class="mb-4 text-base font-normal dark:text-gray-200 text-pretty"> Motivado por mejorar los recursos de mi puesto de trabajo, descubro la programación y me apasiona. Comienzo a formarme en cursos de programación, centrándome principalmente en Java con Spring Boot y React. </p>  </li><li class="mb-10 ms-4"> <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div> <time class="mb-1 text-sm font-normal leading-none text-sky-800 dark:text-sky-200/80">2014</time> <h3 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mt-2"> Grado en Ciencias de la Actividad Física y del Deporte - Universidad de Murcia </h3> <p class="mb-4 text-base font-normal dark:text-gray-200 text-pretty"> Con la matrícula de Ingeniería Telemática en la mano, finalmente me incliné por las Ciencias del Deporte, primero a través de un ciclo formativo y luego con el grado universitario. No me arrepiento de la decisión, ya que me permitió crecer y desarrollar habilidades blandas, convirtiéndome en una persona abierta y flexible. </p>  </li> </ol>  </section> <section id="sobre-mi" data-section="sobre-mi" class="section undefined w-full mx-auto lg:w-[740px] pb-16">  <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"> <svg class="size-7" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path><path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path><path d="M15 19l2 2l4 -4"></path></svg>
+Sobre mí
+</h2> <section class="flex flex-col md:flex-row gap-8 justify-center items-center"> <div class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1"> <p>
+Mi nombre es Sergio y durante 6 años he formado parte del equipo directivo de una tienda en el sector del retail deportivo.
+</p> <p>
+Siempre he estado interesado en la tecnología y he tratado de aportar todo mi conocimiento en esta área a mi puesto como assistant manager.
+</p> <p>
+Me introduje en el retail tras graduarme en la Universidad de Ciencias del Deporte y lo que empezó como un trabajo temporal me ha permitido crecer profesionalmente, 
+      desarrollando habilidades como la organización de grandes cargas de trabajo y la gestión de equipos de más de 30 personas.
+</p> <p>
+Investigando la forma de mejorar algunos procesos de mi día a día descubrí la programación, un campo de la tecnología bastante desconocido para mí y que me resultó muy interesante. 
+      Por ello, decidí estudiarlo de forma reglada mediante un ciclo formativo en desarrollo de software.
+</p> </div> <img src="sergio.webp" class="rounded-full size-64 order-1 md:order-2"> </section>  </section> </main>  <footer class="rounded-lg shadow m-4 bg-black/5 dark:bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10"> <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"> <span class="text-sm sm:text-center text-yellow-800/90 dark:text-yellow-200/90">2026 <a href="https://.dev/" class="hover:underline">Sergio Mendez</a>.
+</span> <ul class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"> <li> <a href="#contacto" class="hover:underline">Contacto</a> </li> </ul> </div> </footer> </body></html>
