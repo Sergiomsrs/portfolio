@@ -1,33 +1,31 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCIE = [
+const EXPERIENCE = [
   {
     date: "2025",
-    title: "Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma",
+    title: "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma",
     description:
-    "Acabo de finalizar el ciclo formativo de Desarrollo de Aplicaciones Multiplataforma, donde he adquirido experiencia práctica en el desarrollo de aplicaciones web, móviles y de escritorio utilizando tecnologías como Java, Spring Boot, React, MySQL y Docker.",
+      "Formación en desarrollo web, móvil y de escritorio con Java, Spring Boot, React, MySQL y Docker. Proyectos prácticos aplicados en entornos reales.",
   },
   {
     date: "2021",
-    title: "Cursos formativos en programación",
-    description:"Motivado por mejorar los recursos de mi puesto de trabajo, descubro la programación y me apasiona. Comienzo a formarme en cursos de programación, centrándome principalmente en Java con Spring Boot y React.",
+    title: "Formación en programación",
+    description: "Cursos especializados en Java con Spring Boot y React. Autodidacta motivado por mejorar procesos mediante tecnología.",
   },
   {
     date: "2014",
-    title: "Grado en Ciencias de la Actividad Física y del Deporte - Universidad de Murcia",
+    title: "Grado en Ciencias de la Actividad Física y del Deporte",
     description:
-      "Con la matrícula de Ingeniería Telemática en la mano, finalmente me incliné por las Ciencias del Deporte, primero a través de un ciclo formativo y luego con el grado universitario. No me arrepiento de la decisión, ya que me permitió crecer y desarrollar habilidades blandas, convirtiéndome en una persona abierta y flexible.",
+      "Universidad de Murcia. Desarrollo de habilidades de organización, liderazgo y gestión de equipos.",
   },
-  
 ]
 ---
 
-<ol class="relative border-s border-gray-200 ml-3">
-  {
-    EXPERIENCIE.map((experiencie) => (
-      <li class="mb-10 ms-4">
-        <ExperienceItem {...experiencie} />
-      </li>
-    ))
-  }
-</ol>
+<div class="relative space-y-8">
+  {/* Línea vertical del timeline */}
+  <div class="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-surface-200 dark:bg-surface-700" />
+  
+  {EXPERIENCE.map((experience) => (
+    <ExperienceItem {...experience} />
+  ))}
+</div>

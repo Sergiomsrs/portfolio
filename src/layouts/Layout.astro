@@ -14,7 +14,7 @@ const { description, title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -25,11 +25,11 @@ const { description, title } = Astro.props
     <ViewTransitions />
   </head>
 
-  <body class="relative text-black dark:text-white">
+  <body class="relative text-surface-900 dark:text-surface-100 font-sans">
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-100 dark:bg-neutral-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-surface-50 dark:bg-surface-950
+      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.08),rgba(248,250,252,1))]
+      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(2,6,23,1))]"
     >
     </div>
     <Header />
@@ -39,21 +39,26 @@ const { description, title } = Astro.props
 </html>
 
 <style is:global>
-  :root {
-    color-scheme: light dark;
-  }
-
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   body {
-    color: rgba(17, 17, 17, 0.9);
+    color: rgba(15, 23, 42, 0.9);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     overscroll-behavior: none;
+  }
+
+  html.dark body {
+    color: rgba(241, 245, 249, 0.9);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -62,9 +67,21 @@ const { description, title } = Astro.props
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    body {
-      color: rgba(255, 255, 255, 0.9);
-    }
+  /* Animaciones de scroll */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* Fallback: si JS no carga, mostrar todo */
+  noscript ~ .animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
   }
 </style>

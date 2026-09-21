@@ -1,17 +1,22 @@
+---
+const { class: className, ...rest } = Astro.props
+---
+
 <a
-  class={`
-  bg-white/5 
-    border dark:border-white/10 border-gray-300 rounded-full
-    flex justify-center items-center gap-x-2
-    py-1 px-2 md:py-2 md:px-4
-    text-xs md:text-base
-    text-black/70 dark:text-white
-    transition
-    hover:scale-110 hover:bg-white/10
-  `}
-  {...Astro.props}
-  target="_blank"
-  rel="noopener noreferrer"
+  class:list={[
+    "inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full",
+    "bg-white dark:bg-surface-800 text-surface-800 dark:text-surface-200",
+    "border border-surface-300 dark:border-surface-600",
+    "shadow-sm",
+    "hover:bg-primary-50 dark:hover:bg-primary-900/40",
+    "hover:border-primary-400 dark:hover:border-primary-500",
+    "hover:text-primary-700 dark:hover:text-primary-300",
+    "transition-all duration-200",
+    "hover:scale-105 active:scale-95",
+    className
+  ]}
+  style="background-color: #ffffff; color: #1e293b; border-color: #cbd5e1;"
+  {...rest}
 >
   <slot />
 </a>
