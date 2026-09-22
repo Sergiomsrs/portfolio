@@ -2,12 +2,15 @@
 const { title, description, image, imageAlt } = Astro.props
 ---
 
-<article class="group">
+<article class="group cursor-default">
   <div class="space-y-3">
-    <h3 class="text-xl font-semibold text-surface-900 dark:text-surface-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-      {title}
-    </h3>
-    <p class="text-surface-600 dark:text-surface-400 leading-relaxed text-pretty">
+    <div class="flex items-start gap-3">
+      <div class="w-0.5 bg-primary-600 dark:bg-primary-400 rounded-full origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-300 ease-out self-stretch"></div>
+      <h3 class="text-xl font-semibold text-surface-900 dark:text-surface-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-all duration-300 group-hover:translate-x-1">
+        {title}
+      </h3>
+    </div>
+    <p class="text-surface-600 dark:text-surface-400 leading-relaxed text-pretty transition-all duration-300 group-hover:translate-x-1 group-hover:text-surface-700 dark:group-hover:text-surface-300">
       {description}
     </p>
     {
