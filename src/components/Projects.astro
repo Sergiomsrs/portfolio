@@ -1,7 +1,7 @@
 ---
-import ProjectEntry from "./ProjectEntry.astro"
+import ProjectEntry from "./ProjectEntry.astro";
 
-const base = import.meta.env.BASE_URL
+const base = import.meta.env.BASE_URL;
 
 const PROJECTS = [
   {
@@ -12,7 +12,7 @@ const PROJECTS = [
     tech: "Java · Spring Boot · React · Timefold",
     explore: {
       label: "Demo",
-      href: "https://sergiomsrs.github.io/prueba-concepto-gestorTurnos/",
+      href: "https://sergiomsrs.github.io/wsf-landing/",
     },
     links: [
       {
@@ -34,9 +34,7 @@ const PROJECTS = [
       "Aplicación de gestión y versionado de recetas personales con evolución documentada de cada receta.",
     tech: "Java · Spring Boot · React · TypeScript · PostgreSQL",
     explore: { label: "Demo", href: "https://sergiomsrs.github.io/MyRecipes/" },
-    links: [
-      { label: "Code", href: "https://github.com/Sergiomsrs/MyRecipes" },
-    ],
+    links: [{ label: "Code", href: "https://github.com/Sergiomsrs/MyRecipes" }],
     image: `${base}my-recipes.webp`,
     imageAlt: "Captura de pantalla del proyecto MyRecipes",
   },
@@ -99,7 +97,7 @@ const PROJECTS = [
     image: `${base}principal.webp`,
     imageAlt: "Captura de pantalla del proyecto Training App",
   },
-]
+];
 ---
 
 <div class="animate-on-scroll">
