@@ -1,0 +1,47 @@
+---
+interface Props {
+  id: string
+  index?: string
+  label: string
+  meta?: string
+  class?: string
+  surface?: boolean
+}
+
+const { id, index, label, meta, class: className, surface = false } = Astro.props
+---
+
+<section
+  id={id}
+  class:list={[
+    "scroll-mt-20 border-t border-line/10",
+    surface && "bg-surface/50",
+    className,
+  ]}
+>
+  <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 py-16 md:py-24">
+    <header class="mb-8 flex items-baseline justify-between gap-4 md:mb-12">
+      <p
+        class="font-mono text-[11px] uppercase tracking-[0.16em] text-faint"
+      >
+        {
+          index && (
+            <>
+              <span>{index}</span>
+              <span class="mx-2 text-faint/60">—</span>
+            </>
+          )
+        }
+        {label}
+      </p>
+      {
+        meta && (
+          <p class="hidden font-mono text-[11px] uppercase tracking-[0.16em] text-faint sm:block">
+            {meta}
+          </p>
+        )
+      }
+    </header>
+    <slot />
+  </div>
+</section>

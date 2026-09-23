@@ -1,0 +1,74 @@
+---
+import LinkButton from "./LinkButton.astro"
+---
+
+<div class="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+  <div class="animate-on-scroll">
+    <h2 class="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+      ¿Hablamos?
+    </h2>
+    <p class="mt-4 max-w-lg text-sm leading-relaxed text-muted md:text-base">
+      Estoy abierto a nuevas oportunidades y proyectos interesantes. Escríbeme
+      y te respondo lo antes posible.
+    </p>
+    <div class="mt-7 flex flex-wrap items-center gap-3">
+      <LinkButton href="mailto:sergiomsrs@gmail.com" variant="solid"
+        >Enviar email</LinkButton
+      >
+      <LinkButton
+        href="https://www.linkedin.com/in/sergio-mendez-soler-03902aa5/"
+        variant="outline">LinkedIn ↗</LinkButton
+      >
+      <LinkButton href="https://github.com/sergiomsrs" variant="outline"
+        >GitHub ↗</LinkButton
+      >
+    </div>
+  </div>
+
+  <aside class="animate-on-scroll lg:border-l lg:border-line/10 lg:pl-12">
+    <dl>
+      <div>
+        <dt
+          class="font-mono text-[10px] uppercase tracking-[0.16em] text-faint"
+        >
+          Email
+        </dt>
+        <dd class="mt-1.5">
+          <a
+            href="mailto:sergiomsrs@gmail.com"
+            class="font-mono text-xs tracking-[0.05em] text-foreground hover:text-accent transition-colors duration-200"
+          >
+            sergiomsrs@gmail.com
+          </a>
+        </dd>
+      </div>
+      <div class="mt-4 border-t border-line/10 pt-4">
+        <dt
+          class="font-mono text-[10px] uppercase tracking-[0.16em] text-faint"
+        >
+          Availability
+        </dt>
+        <dd class="mt-1.5">
+          <span
+            class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em] text-foreground"
+          >
+            <span
+              class="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent"
+              aria-hidden="true"></span>
+            Open to Work
+          </span>
+        </dd>
+      </div>
+      <div class="mt-4 border-t border-line/10 pt-4">
+        <dt
+          class="font-mono text-[10px] uppercase tracking-[0.16em] text-faint"
+        >
+          Based In
+        </dt>
+        <dd class="mt-1.5 font-mono text-xs uppercase tracking-[0.1em] text-foreground">
+          Spain
+        </dd>
+      </div>
+    </dl>
+  </aside>
+</div>

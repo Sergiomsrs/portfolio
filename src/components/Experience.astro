@@ -1,30 +1,29 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+
 const EXPERIENCE = [
   {
-    date: "2025 - Actualidad",
+    date: "2025 — Actualidad",
     title: "Java Backend & Full Stack Developer",
     description:
       "Desarrollo de WorkSchedFlow, aplicación full stack para planificación inteligente de turnos laborales. Spring Boot, React, JWT, MySQL y optimización metaheurística con Timefold Solver.",
   },
   {
-    date: "2023 - 2025",
+    date: "2023 — 2025",
     title: "Desarrollador de Aplicaciones Multiplataforma",
     description:
       "Técnico Superior con prácticas en CodeArts Solutions. Migración WordPress a Drupal, backend con PHP/Symfony y .NET. Metodología ágil Scrum.",
   },
   {
-    date: "2014 - Actualidad",
-    title: "Assistant Manager - Sprinter",
+    date: "2014 — Actualidad",
+    title: "Assistant Manager — Sprinter",
     description:
       "Gestión operativa de tienda con equipo de +30 personas. Planificación de turnos, cumplimiento normativo laboral, análisis de datos con Salesforce, MicroStrategy y Jira.",
   },
 ]
 ---
 
-<div class="relative space-y-8">
-  <div class="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-surface-200 dark:bg-surface-700" />
-
+<div class="animate-on-scroll divide-y divide-line/10 border-y border-line/10">
   {EXPERIENCE.map((experience) => (
     <ExperienceItem {...experience} />
   ))}

@@ -1,9 +1,10 @@
 ---
 import "@fontsource-variable/onest"
+import "@fontsource-variable/jetbrains-mono"
 
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
-import { ViewTransitions } from "astro:transitions"
+import { ClientRouter } from "astro:transitions"
 
 interface Props {
   title: string
@@ -14,7 +15,7 @@ const { description, title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -22,16 +23,17 @@ const { description, title } = Astro.props
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
+    <ClientRouter />
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem("theme");
+        const theme = saved === "light" ? "light" : "dark";
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      })();
+    </script>
   </head>
 
-  <body class="relative text-surface-900 dark:text-surface-100 font-sans">
-    <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-surface-50 dark:bg-surface-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.08),rgba(248,250,252,1))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(2,6,23,1))]"
-    >
-    </div>
+  <body class="relative bg-background text-foreground font-sans antialiased">
     <Header />
     <slot />
     <Footer />
@@ -39,65 +41,117 @@ const { description, title } = Astro.props
 </html>
 
 <script is:inline>
-  function initTheme() {
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = saved || (prefersDark ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem('theme', theme);
-  }
-
   function initThemeToggle() {
-    document.querySelectorAll('.theme-toggle').forEach((btn) => {
-      btn.removeEventListener('click', btn._themeHandler);
+    document.querySelectorAll(".theme-toggle").forEach((btn) => {
+      btn.removeEventListener("click", btn._themeHandler);
       btn._themeHandler = () => {
-        const isDark = document.documentElement.classList.contains('dark');
-        document.documentElement.classList.toggle('dark', !isDark);
-        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        const isDark = document.documentElement.classList.contains("dark");
+        document.documentElement.classList.toggle("dark", !isDark);
+        localStorage.setItem("theme", isDark ? "light" : "dark");
       };
-      btn.addEventListener('click', btn._themeHandler);
+      btn.addEventListener("click", btn._themeHandler);
     });
   }
 
-  initTheme();
   initThemeToggle();
-  document.addEventListener('astro:page-load', initThemeToggle);
+  document.addEventListener("astro:page-load", initThemeToggle);
 </script>
 
 <style is:global>
-  html {
-    font-family: "Onest Variable", system-ui, sans-serif;
-    scroll-behavior: smooth;
+  :root {
+    --color-background: 250 249 246;
+    --color-surface: 242 240 234;
+    --color-foreground: 20 22 28;
+    --color-muted: 92 97 112;
+    --color-faint: 139 144 160;
+    --color-line: 20 22 28;
+    --color-accent: 79 70 229;
+    --color-accent-hover: 67 56 202;
+    --color-accent-violet: 124 58 237;
     color-scheme: light;
   }
 
   html.dark {
+    --color-background: 10 14 23;
+    --color-surface: 15 20 32;
+    --color-foreground: 233 235 242;
+    --color-muted: 154 162 181;
+    --color-faint: 107 115 133;
+    --color-line: 255 255 255;
+    --color-accent: 129 140 248;
+    --color-accent-hover: 165 180 252;
+    --color-accent-violet: 139 92 246;
     color-scheme: dark;
   }
 
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
   body {
-    color: rgba(15, 23, 42, 0.9);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     overscroll-behavior: none;
   }
 
-  html.dark body {
-    color: rgba(241, 245, 249, 0.9);
+  ::selection {
+    background-color: rgb(var(--color-accent) / 0.25);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid rgb(var(--color-accent));
+    outline-offset: 3px;
+    border-radius: 2px;
   }
 
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
     }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
-  /* Animaciones de scroll */
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .nav-link.active {
+    color: rgb(var(--color-accent));
+  }
+
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 
   .animate-on-scroll.visible {
@@ -105,7 +159,6 @@ const { description, title } = Astro.props
     transform: translateY(0) !important;
   }
 
-  /* Fallback: si JS no carga, mostrar todo */
   noscript ~ .animate-on-scroll {
     opacity: 1;
     transform: translateY(0);

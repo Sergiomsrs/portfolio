@@ -1,66 +1,160 @@
 ---
 import ToggleTheme from "./ToggleTheme.astro"
+
+const NAV = [
+  { href: "#work", label: "Work", section: "work" },
+  { href: "#about", label: "About", section: "about" },
+  { href: "#experience", label: "Experience", section: "experience" },
+  { href: "#contact", label: "Contact", section: "contact" },
+]
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-surface-50/80 dark:bg-surface-950/80 backdrop-blur-md border-b border-surface-200 dark:border-surface-800">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
-      <a href="#contacto" class="flex flex-col gap-0.5 group">
-        <span class="font-bold text-lg text-surface-900 dark:text-surface-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Sergio Méndez</span>
-        <span class="text-xs font-medium text-surface-500 dark:text-surface-400 tracking-wide">Desarrollador de Software</span>
-      </a>
+<header
+  class="fixed top-0 inset-x-0 z-50 bg-background/85 backdrop-blur-md border-b border-line/10"
+>
+  <div
+    class="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 md:h-16 lg:px-8"
+  >
+    <a
+      href="#top"
+      class="text-[15px] font-medium text-foreground hover:text-accent transition-colors duration-200"
+    >
+      Sergio Méndez
+    </a>
 
-      <!-- Menú desktop -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#proyectos" class="text-sm font-medium text-surface-600 dark:text-surface-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Proyectos</a>
-        <a href="#habilidades" class="text-sm font-medium text-surface-600 dark:text-surface-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Habilidades</a>
-        <a href="#trayectoria" class="text-sm font-medium text-surface-600 dark:text-surface-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Trayectoria</a>
-        <a href="#sobre-mi" class="text-sm font-medium text-surface-600 dark:text-surface-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Sobre mí</a>
-        <a href="#contacto" class="text-sm font-medium text-surface-600 dark:text-surface-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contacto</a>
-        <ToggleTheme />
-      </div>
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Principal">
+      {
+        NAV.map((item) => (
+          <a
+            href={item.href}
+            data-section={item.section}
+            class="nav-link text-[13px] font-medium text-muted hover:text-foreground transition-colors duration-200"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <span
+        class="inline-flex items-center gap-2 border-l border-line/10 pl-6 font-mono text-[10px] uppercase tracking-[0.14em] text-faint"
+      >
+        <span class="relative flex h-1.5 w-1.5" aria-hidden="true">
+          <span class="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-accent">
+          </span>
+        </span>
+        Open to Work
+      </span>
+      <ToggleTheme />
+    </nav>
 
-      <!-- Menú móvil -->
-      <div class="flex md:hidden items-center gap-2">
-        <ToggleTheme />
-        <button id="menu-btn" class="p-2 rounded-lg text-surface-600 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors" aria-label="Abrir menú">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Menú móvil desplegable -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-surface-200 dark:border-surface-800">
-      <div class="flex flex-col gap-1 pt-4">
-        <a href="#proyectos" class="px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-lg transition-colors">Proyectos</a>
-        <a href="#habilidades" class="px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-lg transition-colors">Habilidades</a>
-        <a href="#trayectoria" class="px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-lg transition-colors">Trayectoria</a>
-        <a href="#sobre-mi" class="px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-lg transition-colors">Sobre mí</a>
-        <a href="#contacto" class="px-3 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-lg transition-colors">Contacto</a>
-      </div>
+    <div class="flex items-center gap-1 md:hidden">
+      <ToggleTheme />
+      <button
+        id="menu-btn"
+        class="p-2 text-faint hover:text-foreground transition-colors duration-200"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          class="h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
     </div>
   </div>
-</nav>
+
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-line/10 bg-background/95 backdrop-blur-md md:hidden"
+  >
+    <nav
+      class="mx-auto flex max-w-6xl flex-col px-6 py-3"
+      aria-label="Principal móvil"
+    >
+      {
+        NAV.map((item) => (
+          <a
+            href={item.href}
+            class="border-b border-line/10 py-3 text-sm font-medium text-muted hover:text-accent transition-colors duration-200 last:border-b-0"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <p
+        class="inline-flex items-center gap-2 py-3 font-mono text-[10px] uppercase tracking-[0.14em] text-faint"
+      >
+        <span class="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent">
+        </span>
+        Open to Work
+      </p>
+    </nav>
+  </div>
+</header>
 
 <script is:inline>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
+  function initHeader() {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
-      menu.classList.add('hidden');
+    if (btn && menu && !btn._headerBound) {
+      btn._headerBound = true;
+      btn.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(!open));
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          menu.classList.add("hidden");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
     }
-  });
 
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.add('hidden');
-    });
-  });
+    const links = document.querySelectorAll(".nav-link[data-section]");
+    if (!links.length || !("IntersectionObserver" in window)) return;
+    if (links[0]._spyBound) return;
+
+    const sections = Array.from(links)
+      .map((link) => document.getElementById(link.dataset.section))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            links.forEach((link) => {
+              link.classList.toggle(
+                "active",
+                link.dataset.section === entry.target.id,
+              );
+            });
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    links[0]._spyBound = true;
+  }
+
+  initHeader();
+  document.addEventListener("astro:page-load", initHeader);
 </script>

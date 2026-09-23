@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string
+  variant?: "solid" | "outline" | "link"
+  class?: string
+}
+
+const { href, variant = "outline", class: className, ...rest } = Astro.props
+
+const isExternal =
+  href.startsWith("http") || href.startsWith("mailto:")
+---
+
+<a
+  href={href}
+  class:list={[
+    "inline-flex items-center gap-2 text-sm font-medium transition-all duration-200",
+    variant === "solid" &&
+      "px-5 py-2.5 rounded-full bg-gradient-to-r from-accent to-accent-violet text-white hover:brightness-110 hover:-translate-y-px active:translate-y-0",
+    variant === "outline" &&
+      "px-5 py-2.5 rounded-full border border-line/15 text-foreground hover:border-accent/50 hover:text-accent hover:-translate-y-px active:translate-y-0",
+    variant === "link" && "text-accent hover:text-accent-hover",
+    className,
+  ]}
+  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+  {...rest}
+>
+  <slot />
+</a>

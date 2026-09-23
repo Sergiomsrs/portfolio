@@ -5,40 +5,26 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: {
-					50: '#eff6ff',
-					100: '#dbeafe',
-					200: '#bfdbfe',
-					300: '#93c5fd',
-					400: '#60a5fa',
-					500: '#3b82f6',
-					600: '#2563eb',
-					700: '#1d4ed8',
-					800: '#1e40af',
-					900: '#1e3a8a',
-					950: '#172554',
-				},
-				surface: {
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0',
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b',
-					600: '#475569',
-					700: '#334155',
-					800: '#1e293b',
-					900: '#0f172a',
-					950: '#020617',
+				background: 'rgb(var(--color-background) / <alpha-value>)',
+				surface: 'rgb(var(--color-surface) / <alpha-value>)',
+				foreground: 'rgb(var(--color-foreground) / <alpha-value>)',
+				muted: 'rgb(var(--color-muted) / <alpha-value>)',
+				faint: 'rgb(var(--color-faint) / <alpha-value>)',
+				line: 'rgb(var(--color-line) / <alpha-value>)',
+				accent: {
+					DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+					hover: 'rgb(var(--color-accent-hover) / <alpha-value>)',
+					violet: 'rgb(var(--color-accent-violet) / <alpha-value>)',
 				},
 			},
 			fontFamily: {
 				sans: ['"Onest Variable"', 'system-ui', 'sans-serif'],
+				mono: ['"JetBrains Mono Variable"', 'ui-monospace', 'monospace'],
 			},
 			animation: {
-				'fade-in': 'fadeIn 0.6s ease-out forwards',
-				'slide-up': 'slideUp 0.6s ease-out forwards',
-				'slide-up-delayed': 'slideUp 0.6s ease-out 0.2s forwards',
+				'fade-in': 'fadeIn 0.5s ease-out forwards',
+				'slide-up': 'slideUp 0.5s ease-out forwards',
+				'pulse-dot': 'pulseDot 2.4s ease-in-out infinite',
 			},
 			keyframes: {
 				fadeIn: {
@@ -46,8 +32,12 @@ export default {
 					'100%': { opacity: '1' },
 				},
 				slideUp: {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'0%': { opacity: '0', transform: 'translateY(12px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				pulseDot: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.35' },
 				},
 			},
 		},
