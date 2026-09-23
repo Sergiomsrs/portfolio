@@ -8,24 +8,30 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Esto es crucial para que pueda escribir en gh-pages
-      
+      contents: write # Esto es crucial para que pueda escribir en gh-pages
+
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Importante para el historial de git
+          fetch-depth: 0 # Importante para el historial de git
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.1.1
 
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: pnpm
 
-      - run: npm ci
-      - run: npm run build
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          force_orphan: true  # Esto evita problemas con commits previos
+          force_orphan: true # Esto evita problemas con commits previos

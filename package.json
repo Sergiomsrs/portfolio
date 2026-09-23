@@ -1,6 +1,7 @@
 {
   "name": "porfolio-dev",
   "type": "module",
+  "packageManager": "pnpm@11.1.1",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -8,7 +9,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npm run build && npx gh-pages -d dist"
+    "deploy": "pnpm run build && pnpm exec gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/check": "0.9.10",
