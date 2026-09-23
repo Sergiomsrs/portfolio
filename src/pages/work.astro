@@ -1,0 +1,50 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import Section from "@/components/Section.astro";
+import Projects from "@/components/Projects.astro";
+import AboutMe from "@/components/AboutMe.astro";
+import Skills from "@/components/Skills.astro";
+import Experience from "@/components/Experience.astro";
+import Contact from "@/components/Contact.astro";
+---
+
+<Layout
+  title="Selected Work | Sergio Méndez"
+  description="Proyectos seleccionados, sobre mí, stack y experiencia de Sergio Méndez — Java Backend & Full Stack Developer."
+>
+  <main>
+    <h1 class="sr-only">Selected Work — Sergio Méndez</h1>
+    <Section
+      id="work"
+      index="01"
+      label="Selected Work"
+      meta="05 Projects"
+      border={false}
+    >
+      <Projects />
+    </Section>
+
+    <Section id="about" index="02" label="About" surface>
+      <AboutMe />
+    </Section>
+
+    <Section id="stack" index="03" label="Stack">
+      <Skills />
+    </Section>
+
+    <Section
+      id="experience"
+      index="04"
+      label="Experience"
+      meta="2014 — 2026"
+      surface
+    >
+      <Experience />
+    </Section>
+
+    <Section id="contact" index="05" label="Contact" meta="Open to Work">
+      <Contact />
+    </Section>
+  </main>
+</Layout>

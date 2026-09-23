@@ -1,90 +1,99 @@
 ---
 import LinkButton from "./LinkButton.astro"
 
-const META = [
-  { label: "Location", value: "Based in Spain" },
-  { label: "Status", value: "Open to Work", dot: true },
-  { label: "Currently Building", value: "→ MyRecipes", href: "#work" },
-  { label: "Year", value: "2026" },
+const base = import.meta.env.BASE_URL
+
+const INDEX = [
+  { n: "01", label: "Work", href: `${base}work/` },
+  { n: "02", label: "About", href: `${base}work/#about` },
+  { n: "03", label: "Experience", href: `${base}work/#experience` },
+  { n: "04", label: "Contact", href: `${base}work/#contact` },
 ]
+
+const MICRO = ["Based in Spain", "Open to Work", "2026"]
 ---
 
 <section
   id="top"
-  class="mx-auto w-full max-w-6xl px-6 pt-24 pb-14 md:pt-32 md:pb-20 lg:px-8"
+  class="mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-6xl flex-col justify-center px-6 pt-24 pb-12 md:pt-28 lg:px-8"
 >
-  <div class="grid gap-10 lg:grid-cols-[1.7fr_1fr] lg:gap-16">
-    <div class="animate-on-scroll">
-      <h1
-        class="text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
-      >
-        Sergio Méndez
-      </h1>
-      <p class="mt-4 text-lg font-medium text-muted md:text-xl">
-        Java Backend &amp; Full Stack Developer
-      </p>
-      <p
-        class="mt-5 max-w-xl text-base leading-relaxed text-muted md:text-lg"
-      >
-        Construyo software para resolver problemas reales de negocio.
-      </p>
-      <p
-        class="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-faint"
-      >
-        Java · Spring Boot · React · PostgreSQL
-      </p>
-
-      <div class="mt-8 flex flex-wrap items-center gap-3">
-        <LinkButton href="#work" variant="solid">Ver proyectos</LinkButton>
-        <LinkButton
-          href="https://www.linkedin.com/in/sergio-mendez-soler-03902aa5/"
-          variant="outline">LinkedIn ↗</LinkButton
-        >
-        <LinkButton href="https://github.com/sergiomsrs" variant="outline"
-          >GitHub ↗</LinkButton
-        >
-      </div>
-    </div>
-
-    <aside
-      class="animate-on-scroll lg:border-l lg:border-line/10 lg:pl-12"
-      aria-label="Información contextual"
+  <div class="animate-on-scroll mx-auto w-full max-w-3xl text-center">
+    <p
+      class="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-accent"
     >
-      <dl>
-        {
-          META.map((item, i) => (
-            <div
-              class:list={[
-                i > 0 && "mt-4 border-t border-line/10 pt-4",
-              ]}
-            >
-              <dt class="font-mono text-[10px] uppercase tracking-[0.16em] text-faint">
-                {item.label}
-              </dt>
-              <dd class="mt-1.5">
-                {item.href ? (
-                  <a
-                    href={item.href}
-                    class="font-mono text-xs uppercase tracking-[0.1em] text-foreground hover:text-accent transition-colors duration-200"
-                  >
-                    {item.value}
-                  </a>
-                ) : (
-                  <span class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em] text-foreground">
-                    {item.dot && (
-                      <span
-                        class="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent"
-                        aria-hidden="true"
-                      />
-                    )}
-                    {item.value}
-                  </span>
-                )}
-              </dd>
-            </div>
-          ))
-        }
-      </dl>
-    </aside>
+      <span class="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent" aria-hidden="true"></span>
+      Open to Work — 2026
+    </p>
+
+    <h1
+      class="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+    >
+      Sergio Méndez
+    </h1>
+
+    <p class="mt-4 text-lg font-medium text-muted md:text-xl">
+      Java Backend &amp; Full Stack Developer
+    </p>
+
+    <p
+      class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted md:text-lg"
+    >
+      Construyo software para resolver problemas reales de negocio.
+    </p>
+
+    <p
+      class="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-faint"
+    >
+      Java · Spring Boot · React · PostgreSQL
+    </p>
+
+    <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
+      <LinkButton href={`${base}work/`} variant="solid"
+        >Ver proyectos →</LinkButton
+      >
+      <LinkButton
+        href="https://www.linkedin.com/in/sergio-mendez-soler-03902aa5/"
+        variant="outline">LinkedIn ↗</LinkButton
+      >
+      <LinkButton href="https://github.com/sergiomsrs" variant="outline"
+        >GitHub ↗</LinkButton
+      >
+    </div>
   </div>
+
+  <nav
+    class="animate-on-scroll mt-14 border-t border-line/10 pt-6"
+    aria-label="Índice del portfolio"
+  >
+    <ul class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+      {
+        INDEX.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="group inline-flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-faint transition-colors duration-200 hover:text-accent"
+            >
+              <span class="text-faint/60 transition-colors duration-200 group-hover:text-accent/70">
+                {item.n}
+              </span>
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <p
+    class="animate-on-scroll mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 font-mono text-[10px] uppercase tracking-[0.16em] text-faint"
+  >
+    {
+      MICRO.map((item, i) => (
+        <>
+          {i > 0 && <span class="text-faint/40" aria-hidden="true">·</span>}
+          <span>{item}</span>
+        </>
+      ))
+    }
+  </p>
 </section>

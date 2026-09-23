@@ -6,15 +6,25 @@ interface Props {
   meta?: string
   class?: string
   surface?: boolean
+  border?: boolean
 }
 
-const { id, index, label, meta, class: className, surface = false } = Astro.props
+const {
+  id,
+  index,
+  label,
+  meta,
+  class: className,
+  surface = false,
+  border = true,
+} = Astro.props
 ---
 
 <section
   id={id}
   class:list={[
-    "scroll-mt-20 border-t border-line/10",
+    "scroll-mt-20",
+    border && "border-t border-line/10",
     surface && "bg-surface/50",
     className,
   ]}
