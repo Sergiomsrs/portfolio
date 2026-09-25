@@ -74,17 +74,19 @@ const { n, title, summary, tech, explore, links = [], image, imageAlt } =
 
   {
     image && (
-      <div
-        class="hidden overflow-hidden rounded-sm border border-line/10 md:block"
-        aria-hidden="true"
+      <button
+        type="button"
+        data-lightbox
+        class="block overflow-hidden rounded-sm border border-line/10"
+        aria-label={`Ampliar imagen de ${title}`}
       >
         <img
           loading="lazy"
-          class="aspect-video w-full object-cover opacity-70 saturate-[0.85] transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-100 group-hover:saturate-100"
+          class="block aspect-video w-full object-cover transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-100 group-hover:saturate-100 md:opacity-70 md:saturate-[0.85]"
           src={image}
-          alt={imageAlt || ""}
+          alt={imageAlt || `Captura de pantalla del proyecto ${title}`}
         />
-      </div>
+      </button>
     )
   }
 </article>

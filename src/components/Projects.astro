@@ -103,3 +103,95 @@ const PROJECTS = [
 <div class="animate-on-scroll">
   {PROJECTS.map((project) => <ProjectEntry {...project} />)}
 </div>
+
+<div
+  id="lightbox"
+  class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Imagen ampliada del proyecto"
+  aria-hidden="true"
+  tabindex="-1"
+>
+  <button
+    type="button"
+    id="lightbox-close"
+    class="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/40 text-white transition-colors duration-200 hover:bg-black/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+    aria-label="Cerrar imagen ampliada"
+  >
+    <svg
+      class="h-5 w-5"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <img
+    id="lightbox-img"
+    class="max-h-[85vh] max-w-[92vw] rounded-sm object-contain shadow-2xl"
+    alt=""
+  />
+</div>
+
+<script is:inline>
+  function initLightbox() {
+    if (document._lightboxBound) return;
+    document._lightboxBound = true;
+
+    const close = () => {
+      const overlay = document.getElementById("lightbox");
+      if (overlay) {
+        overlay.classList.add("hidden");
+        overlay.classList.remove("flex");
+        overlay.setAttribute("aria-hidden", "true");
+      }
+      document.body.classList.remove("overflow-hidden");
+    };
+
+    const open = (img) => {
+      const overlay = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("lightbox-close");
+      if (!overlay || !lightboxImg) return;
+
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt || "";
+      overlay.classList.remove("hidden");
+      overlay.classList.add("flex");
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("overflow-hidden");
+      closeBtn?.focus();
+    };
+
+    document.addEventListener("click", (event) => {
+      const overlay = document.getElementById("lightbox");
+
+      if (event.target.closest("#lightbox-close")) {
+        close();
+        return;
+      }
+
+      if (overlay && event.target === overlay) {
+        close();
+        return;
+      }
+
+      const trigger = event.target.closest("[data-lightbox]");
+      const img = trigger?.querySelector("img");
+      if (img) open(img);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") close();
+    });
+  }
+
+  initLightbox();
+  document.addEventListener("astro:page-load", initLightbox);
+</script>
