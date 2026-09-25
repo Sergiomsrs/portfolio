@@ -1,27 +1,31 @@
 ---
-import LinkButton from "./LinkButton.astro"
+import LinkButton from "./LinkButton.astro";
 
-const base = import.meta.env.BASE_URL
+const base = import.meta.env.BASE_URL;
 
 const INDEX = [
   { n: "01", label: "Work", href: `${base}work/` },
   { n: "02", label: "About", href: `${base}work/#about` },
   { n: "03", label: "Experience", href: `${base}work/#experience` },
   { n: "04", label: "Contact", href: `${base}work/#contact` },
-]
+];
 
-const MICRO = ["Based in Spain", "Open to Work", "2026"]
+const MICRO = ["Based in Spain", "Open to Work", "2026"];
 ---
 
 <section
   id="top"
   class="hero-shell relative isolate mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-6xl flex-col justify-center overflow-hidden px-6 pt-24 pb-12 md:pt-28 lg:px-8"
 >
-  <div class="relative z-10 animate-on-scroll mx-auto w-full max-w-3xl text-center">
+  <div
+    class="relative z-10 animate-on-scroll mx-auto w-full max-w-3xl text-center"
+  >
     <p
       class="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-accent"
     >
-      <span class="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent" aria-hidden="true"></span>
+      <span
+        class="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent"
+        aria-hidden="true"></span>
       Open to Work — 2026
     </p>
 
@@ -41,9 +45,7 @@ const MICRO = ["Based in Spain", "Open to Work", "2026"]
       Construyo software para resolver problemas reales de negocio.
     </p>
 
-    <p
-      class="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-faint"
-    >
+    <p class="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-faint">
       Java · Spring Boot · React · PostgreSQL
     </p>
 
@@ -90,7 +92,11 @@ const MICRO = ["Based in Spain", "Open to Work", "2026"]
     {
       MICRO.map((item, i) => (
         <>
-          {i > 0 && <span class="text-faint/40" aria-hidden="true">·</span>}
+          {i > 0 && (
+            <span class="text-faint/40" aria-hidden="true">
+              ·
+            </span>
+          )}
           <span>{item}</span>
         </>
       ))
@@ -101,10 +107,21 @@ const MICRO = ["Based in Spain", "Open to Work", "2026"]
 <style>
   .hero-shell {
     background-image:
-      radial-gradient(circle, rgb(var(--color-line) / 0.055) 0.7px, transparent 0.8px),
-      linear-gradient(115deg, transparent 25%, rgb(var(--color-accent) / 0.035), transparent 68%);
+      radial-gradient(
+        circle,
+        rgb(var(--color-line) / 0.055) 0.7px,
+        transparent 0.8px
+      ),
+      linear-gradient(
+        115deg,
+        transparent 25%,
+        rgb(var(--color-accent) / 0.035),
+        transparent 68%
+      );
     background-position: center, center;
-    background-size: 18px 18px, 100% 100%;
+    background-size:
+      18px 18px,
+      100% 100%;
   }
 
   .hero-shell::before {
