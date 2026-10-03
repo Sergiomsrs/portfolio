@@ -1,10 +1,10 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
-    date: "2025 — Actualidad",
-    title: "Java Backend & Full Stack Developer",
+    date: "2023 — Actualidad",
+    title: "Proyecto personal — Java Backend & Full Stack Developer",
     description:
       "Desarrollo de WorkSchedFlow, aplicación full stack para planificación inteligente de turnos laborales. Spring Boot, React, JWT, MySQL y optimización metaheurística con Timefold Solver.",
   },
@@ -20,11 +20,9 @@ const EXPERIENCE = [
     description:
       "Gestión operativa de tienda con equipo de +30 personas. Planificación de turnos, cumplimiento normativo laboral, análisis de datos con Salesforce, MicroStrategy y Jira.",
   },
-]
+];
 ---
 
 <div class="animate-on-scroll divide-y divide-line/10 border-y border-line/10">
-  {EXPERIENCE.map((experience) => (
-    <ExperienceItem {...experience} />
-  ))}
+  {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
 </div>
