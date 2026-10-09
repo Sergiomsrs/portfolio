@@ -8,7 +8,7 @@ const PROJECTS = [
     n: "01",
     title: "WorkSchedFlow",
     summary:
-      "Software de planificación de turnos de trabajo que cumple normativas laborales, con interfaz para gestores de equipos.",
+      "Aplicación para gestionar equipos que trabajan por turnos. Crea los cuadrantes cuidando el descanso legal, controla los fichajes y las horas, y cuando alguien falta propone automáticamente quién lo sustituye. Multiempresa, con roles y demo abierta.",
     tech: "Java · Spring Boot · React · Timefold",
     explore: {
       label: "Demo",
@@ -31,7 +31,7 @@ const PROJECTS = [
     n: "02",
     title: "MyRecipes",
     summary:
-      "Aplicación de gestión y versionado de recetas personales con evolución documentada de cada receta.",
+      "Aplicación para registrar cada intento de una receta y ver cómo evoluciona versión a versión. La uso yo mismo. API en Java y Spring Boot con JWT y PostgreSQL, frontend en React y TypeScript, desplegado en mi VPS.",
     tech: "Java · Spring Boot · React · TypeScript · PostgreSQL",
     explore: { label: "Demo", href: "https://sergiomsrs.github.io/MyRecipes/" },
     links: [{ label: "Code", href: "https://github.com/Sergiomsrs/MyRecipes" }],
@@ -57,46 +57,6 @@ const PROJECTS = [
     image: `${base}my-class-360-landing.webp`,
     imageAlt: "Captura de pantalla del proyecto MyClass360",
   },
-  {
-    n: "04",
-    title: "TimeTrack",
-    summary:
-      "Sistema de control horario: registro de fichajes y supervisión para empleados y administradores.",
-    tech: "Java · Spring Boot · React",
-    explore: {
-      label: "Code",
-      href: "https://github.com/Sergiomsrs/timetrack-ui",
-    },
-    links: [
-      { label: "UI", href: "https://github.com/Sergiomsrs/timetrack-ui" },
-      { label: "API", href: "https://github.com/Sergiomsrs/timetrack-api" },
-    ],
-    image: `${base}timeTrack.webp`,
-    imageAlt: "Captura de pantalla del proyecto TimeTrack",
-  },
-  {
-    n: "05",
-    title: "Training App",
-    summary:
-      "Plataforma en desarrollo para la creación y gestión de entrenamientos con análisis de datos de usuarios.",
-    tech: "React · Java · Spring Boot · MySQL · MongoDB",
-    explore: {
-      label: "Code",
-      href: "https://github.com/Sergiomsrs/app-training-v.0",
-    },
-    links: [
-      {
-        label: "Workout API",
-        href: "https://github.com/Sergiomsrs/Wod-Api--Shared",
-      },
-      {
-        label: "Users API",
-        href: "https://github.com/Sergiomsrs/Usersapp-Api--Shared",
-      },
-    ],
-    image: `${base}principal.webp`,
-    imageAlt: "Captura de pantalla del proyecto Training App",
-  },
 ];
 ---
 
@@ -119,12 +79,7 @@ const PROJECTS = [
     class="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/40 text-white transition-colors duration-200 hover:bg-black/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
     aria-label="Cerrar imagen ampliada"
   >
-    <svg
-      class="h-5 w-5"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
+    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         stroke-linecap="round"
         stroke-linejoin="round"

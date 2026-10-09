@@ -49,13 +49,17 @@ const { n, title, summary, tech, explore, links = [], image, imageAlt } =
         href={explore.href}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-hover transition-colors duration-200"
+        class="group/explore inline-flex min-h-11 items-center text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:min-h-0"
       >
-        Explore project
         <span
-          class="transition-transform duration-300 group-hover:translate-x-1"
-          aria-hidden="true">→</span
+          class="inline-flex items-center gap-1.5 rounded-lg bg-accent/10 px-2 py-1 transition-colors duration-200 group-hover/explore:bg-accent/15 md:rounded-none md:bg-transparent md:px-0 md:py-0 md:group-hover/explore:bg-transparent"
         >
+          Explore project
+          <span
+            class="transition-transform duration-300 group-hover:translate-x-1"
+            aria-hidden="true">→</span
+          >
+        </span>
       </a>
       {
         links.map((link) => (
